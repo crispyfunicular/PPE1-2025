@@ -28,6 +28,20 @@ J’ai découvert l’option -p + accolades avec la commande mkdir pour créer d
 -	Je me suis donc créé deux tableaux (voir ci-dessous) pour me rappeler :  
     - les principales commandes git  
     - les dossiers les plus importants à la racine  
--	J’ai beaucoup aimé jouer avec les lignes de commandes du terminal et j’ai retrouvé l’envie passer la certification « Linux Essentials » du Linux Professional Institute (LPI) que j’avais commencé à préparer cet été mais que j’avais laissée de côté au profit de Python.  
+-	J’ai beaucoup aimé jouer avec les lignes de commandes du terminal et j’ai retrouvé l’envie passer la certification « Linux Essentials » du Linux Professional Institute (LPI) que j’avais commencé à préparer cet été mais que j’avais laissée de côté au profit de Python (il ne reste plus à présent qu'à trouver un centre où passer l'examen, et ce n'est pas une mince affaire).  
 
-<img alt="image" src="https://github.com/user-attachments/assets/4dc32dd2-47d7-46cb-8bc2-15b20470e347" />
+<img alt="image" src="https://github.com/user-attachments/assets/4dc32dd2-47d7-46cb-8bc2-15b20470e347" height="600"/>
+
+
+
+# Semaine 2 – 1er octobre  
+## Notions abordées en cours  
+git vs github, ensemble des commandes git (en particulier commit), clé ssh  
+Routine : git pull > modifications > git add / git rm > git commit > git push > git tag  
+<img alt="image" src="img/GIT-commit.png" height="300"/>
+
+
+## Réflexions personnelles  
+-	J'avais créé ma clé SSH il y a quelque temps déjà pour les besoins de mes divers projets sur GitHub  
+-	De même, j'étais déjà à l'aise avec les commandes git, indispensables pour communiquer entre mon profil GitHub et mes ordinateurs fixe et portable
+-	Vivement la suite !   
