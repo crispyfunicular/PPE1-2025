@@ -1,1 +1,30 @@
-# Journal de bord du projet encadré"
+# Journal de bord du projet encadré
+
+## Semaine 1 – 24 septembre
+# Notions abordées en cours :
+fichier, dossier/répertoire, dossier « parent », arborescence, racine, dossier personnel, dossier courant, chemin absolu ou relatif, caractères de remplacements (wildcards)
+#Travail à la maison :
+J’ai réalisé l’exercice 1 à la maison, sur mon ordinateur fixe. J’ai copié les lignes de commandes utilisées :
+  mkdir Exercice1
+  cd Exercice1
+  wget "http://plurital.org/ppe1/seance1/archive-25.zip"
+  unzip archive-25.zip
+  mkdir -p {txt,ann}/{2016,2017,2018}/{01,02,03,04,05,06,07,08,09,10,11,12}
+  mkdir -p img/{Paris,Tokyo}
+  mkdir docs
+  mv 2016_01_*.txt txt/2016/01
+
+J’ai découvert l’option -p + accolades avec la commande mkdir pour créer deux dossiers (parents) partageant la même structure interne (ici, les sous-dossiers « année » et les sous-sous-dossiers « mois »). Très pratique !
+J’ai néanmoins trouvé très laborieux de 
+
+#Réflexions personnelles :
+•	Je connaissais la plupart des commandes présentées lors du cours. J’ai profité de l’occasion pour « feuilleter » les manuels (man) de ces fonctions et découvrir de nouvelles options.
+•	J’ai beaucoup utilisé les commandes git auparavant pour :
+  o	envoyer sur github les améliorations apportées à mon projet personnel « Magister Conjugationis » (pour réviser mes conjugaisons en latin)
+  o	synchroniser le contenu de mes ordinateurs fixe et portable
+•	Je me suis donc créé deux tableaux (voir ci-dessous) pour me rappeler :
+  o	les principales commandes git
+  o	les dossiers les plus importants à la racine
+•	J’ai beaucoup aimé jouer avec les lignes de commandes du terminal et j’ai retrouvé l’envie passer la certification « Linux Essentials » du Linux Professional Institute (LPI) que j’avais commencé à préparer cet été mais que j’avais laissée de côté au profit de Python.
+
+<img width="956" height="1075" alt="image" src="https://github.com/user-attachments/assets/4dc32dd2-47d7-46cb-8bc2-15b20470e347" />
