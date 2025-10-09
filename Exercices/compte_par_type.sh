@@ -1,5 +1,13 @@
 #!/usr/bin/bash
 
-year="2016"
+entity=$1
 
-cat "../Exercice1/ann/$year/"*.ann | grep $1 | wc -l
+if ! [[ "$entity" =~ ^(Location|Person|Organization)$ ]]
+then
+    echo "usage: $0 entity"
+    echo "invalid entity: $entity"
+    exit 1
+fi
+
+cat "../Exercice1/ann/2016/"*.ann | grep $entity | wc -l
+
