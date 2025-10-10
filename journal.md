@@ -40,8 +40,70 @@ git vs github, ensemble des commandes git (en particulier commit), clé ssh
 Routine : git pull > modifications > git add / git rm > git commit > git push > git tag  
 <img alt="image" src="img/GIT-commit.png" height="300"/>
 
+## Travail à la maison  
+Du git !
+Nous avons créé notre premier tag en suivant la syntaxe suivante : git tag [-a][-m message] <tagname> [commit], sans oublier que les tags exigent un git à part pour eux seuls : git push --tags
+-   par exemple pour notre exercice : git tag -a -m "Exercice 1 - Premier script" tp1-ex1
+
 
 ## Réflexions personnelles  
 -	J'avais créé ma clé SSH il y a quelque temps déjà pour les besoins de mes divers projets sur GitHub  
 -	De même, j'étais déjà à l'aise avec les commandes git, indispensables pour communiquer entre mon profil GitHub et mes ordinateurs fixe et portable
+-   J'ai mis à jour ma liste de commandes git dans le fichier où je rassemble toutes les commandes et routines utiles sous Linux
+![alt text](image-1.png)
+
 -	Vivement la suite !   
+
+
+# Semaine 3 – 8 octobre  
+## Notions abordées en cours  
+Nous avons appris à rediriger certaines commandes à l'aide de chevrons et de pipelines :
+- l'entrée standard (0 stdin), la sortie standard (1 stdout), la sortie d'erreurs standard (2 stderr)
+- chevrons simples (>, >$, 2>) pour écraser le fichier
+- chevrons doubles (>>, >>$, 2>>) pour écrire à la fin du fichier existant, sans l'écraser  
+Ex : cat *.txt | grep université | wc > output.txt
+
+
+## Travail à la maison  
+Du bash !  
+Pour réaliser les exercices, il m'a fallu lire les manuels des commandes suivantes : grep, sort, uniq, echo, cut et tail (+ head qui ne figurait pas sur la liste fournie)
+
+```
+#!/usr/bin/bash
+
+year=$1
+month=$2
+number=$3
+
+if ! [[ "$year" =~ ^[0-9]{4}|\*$ ]]
+then
+    echo "usage: $0 year month number"
+    echo "invalid year: $year"
+    exit 1
+fi
+
+if ! [[ "$month" =~ ^([0-9]{2}|\*)$ ]]
+then
+    echo "usage: $0 year month number"
+    echo "invalid month: $month"
+    exit 1
+fi
+
+if ! [ $number -gt 0 ]
+then
+    echo "usage: $0 year month number"
+    echo "invalid number: $number"
+    exit 1
+fi
+
+cat ../Exercice1/ann/$year/${year}_${month}*.ann | grep Location | cut -f 3 | sort | uniq -c | sort -n | tail -n $number
+
+```
+![alt text](image.png)
+
+
+## Réflexions personnelles  
+- J'ai eu (beaucoup) de mal à dompter la syntaxe propre à bash et j'ai eu du mal à me défaire de mes habitudes pytonesques :
+-- absence d'espace autour du signe "="
+-- place du "!" juste après le "if"
+- Je comprends l'importance d'aller consulter les manuels des commandes mentionnées rapidement en cours pour comprendre leur fonctionnement et réussir à faire les exercices
