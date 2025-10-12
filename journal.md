@@ -50,7 +50,7 @@ Nous avons créé notre premier tag en suivant la syntaxe suivante : git tag [-a
 -	J'avais créé ma clé SSH il y a quelque temps déjà pour les besoins de mes divers projets sur GitHub  
 -	De même, j'étais déjà à l'aise avec les commandes git, indispensables pour communiquer entre mon profil GitHub et mes ordinateurs fixe et portable
 -   J'ai mis à jour ma liste de commandes git dans le fichier où je rassemble toutes les commandes et routines utiles sous Linux
-![alt text](image-1.png)
+<img alt="image" src="img/GIT-commandes.png" height="300"/>
 
 -	Vivement la suite !   
 
@@ -99,11 +99,40 @@ fi
 cat ../Exercice1/ann/$year/${year}_${month}*.ann | grep Location | cut -f 3 | sort | uniq -c | sort -n | tail -n $number
 
 ```
-![alt text](image.png)
+<img alt="image" src="img/exercice-bash.png" height="300"/>
+
+
+Page de code à expliquer :  
+<img alt="image" src="img/code-bash.png" height="500"/>
+
+| code bash | explication |
+| - | - |
+| #!/ usr/ bin/ bash | Le shebang indique qu’il faut exécuter le programme avec bash |
+| if [ $# -ne 1 ] | condition à remplir : "si le nombre d’arguments ($#) est différent de (-ne) 1 -> si l'utilisateurice a fourni moins ou plus d'un argument  … |
+| then | … alors… |
+| echo "…" | Afficher sur le terminal le message entre guillemets |
+| exit | Mettre fin au programme |
+| fi | Fin de la condition-conséquence |
+| FICHIER_URLS=$1 | Assigner l’argument fourni à la variable « FICHIER_URL » |
+| OK=0 | Assigner la valeur 0 à la variable « OK » |
+| NOK=0 | Assigner la valeur 0 à la variable « NOK » |
+| while read -r LINE; | A l’instar de la commande « input » en Python, la commande « read » lit l’input en ignorant les \ (option -r) et l’assigne à la variable « LINE » |
+| echo "la ligne : $LINE" | b |
+| if [[ $LINE =∼ ^ https ?:// ]] | b |
+| then | … alors… |
+| echo "…" | Afficher sur le terminal le message entre guillemets |
+| OK=$ ( expr $OK + 1) | Ajouter 1 à la valeur de la variable « OK » en utilisant la commande « expr » (équivalent du « += 1 » en Python). On comprend que la variable « OK » comptabilise le nombre d’URL valides. |
+| else | Au cas où la condition donnée en « if » ne serait pas réalisée |
+| echo "…" | Afficher sur le terminal le message entre guillemets |
+| NOK=$ ( expr $NOK + 1) | Ajouter 1 à la valeur de la variable « NOK » en utilisant la commande « expr » (équivalent du « += 1 » en Python). On comprend que la variable « NOK » comptabilise le nombre d’URL invalides. |
+| fi | Fin de condition |
+| done < $FICHIER_URLS | Fournir à la boucle « while » le contenu de la variable « FICHIER_URLS » |
+| echo " $OK URLs et $NOK lignes douteuses " | Afficher sur le terminal le nombre d’URL valides (« $OK URLS ») suivi du nombre d’URL invalides (« $NOK lignes douteuses ») |
+
 
 
 ## Réflexions personnelles  
-- J'ai eu (beaucoup) de mal à dompter la syntaxe propre à bash et j'ai eu du mal à me défaire de mes habitudes pytonesques :
+- J'ai eu (beaucoup) de mal à dompter la syntaxe propre à bash et à me défaire de mes habitudes pytonesques :
 -- absence d'espace autour du signe "="
 -- place du "!" juste après le "if"
 - Je comprends l'importance d'aller consulter les manuels des commandes mentionnées rapidement en cours pour comprendre leur fonctionnement et réussir à faire les exercices
