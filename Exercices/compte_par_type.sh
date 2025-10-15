@@ -10,4 +10,5 @@ then
 fi
 
 cat "../Exercice1/ann/2016/"*.ann | grep $entity | wc -l
-
+cat "../Exercice1/ann/2017/"*.ann | grep $entity | wc -l
+cat "../Exercice1/ann/2018/"*.ann | grep $entity | wc -l
