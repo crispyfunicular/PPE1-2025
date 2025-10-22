@@ -136,3 +136,16 @@ Page de code à expliquer :
 -- absence d'espace autour du signe "="
 -- place du "!" juste après le "if"
 - Je comprends l'importance d'aller consulter les manuels des commandes mentionnées rapidement en cours pour comprendre leur fonctionnement et réussir à faire les exercices
+
+
+# Semaine 4 – 15 octobre  
+## Notions abordées en cours  
+
+
+# Semaine 5 – 22 octobre  
+## Notions abordées en cours  
+if [ ! -f  $1 ]  
+then  
+&nbsp;&nbsp;&nbsp;echo " vous devez indiquer un fichier "  
+&nbsp;&nbsp;&nbsp;exit  
+fi
