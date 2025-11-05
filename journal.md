@@ -130,7 +130,6 @@ Page de code à expliquer :
 | echo " $OK URLs et $NOK lignes douteuses " | Afficher sur le terminal le nombre d’URL valides (« $OK URLS ») suivi du nombre d’URL invalides (« $NOK lignes douteuses ») |
 
 
-
 ## Réflexions personnelles  
 - J'ai eu (beaucoup) de mal à dompter la syntaxe propre à bash et à me défaire de mes habitudes pytonesques :
 -- absence d'espace autour du signe "="
@@ -140,12 +139,31 @@ Page de code à expliquer :
 
 # Semaine 4 – 15 octobre  
 ## Notions abordées en cours  
-
+XXX  
 
 # Semaine 5 – 22 octobre  
 ## Notions abordées en cours  
-if [ ! -f  $1 ]  
-then  
-&nbsp;&nbsp;&nbsp;echo " vous devez indiquer un fichier "  
-&nbsp;&nbsp;&nbsp;exit  
-fi
+XXX  
+
+# Semaine 6 – 5 novembre  
+## Notions abordées en cours  
+```
+Triumvira des caractères spéciaux (en bash ou C) :  
+    \t : tabulation  
+    \n : retour à la ligne  
+    \r : retour charriot  
+```
+```
+Caractère d'échappement :  
+mkdir a\*isborn OU mkdir "a*isborn"  
+mkdir un\ dossier OU mkdir "un dossier"  
+```
+
+## Travail à la maison  
+mini-projet 2 : modifier le script de façon à afficher les infos du tableau tsv dans un tableau HTML (tableau-fr.html)  
+
+
+## Réflexions personnelles 
+Bien que je n'aie pas encore de groupe pour le projet de fin de semestre, j'ai réfléchi à un mot sur lequel je pourrais travailler et qui ne présente pas d'équivalence 1 à 1 évidente en langue étrangère. J'ai pensé au terme "**laïcité**", qui recouvre un concepte très spécifique en droit français et qui peut se traduire de diverses façons en anglais et catalan. J'hésite sur entre ces deux langues mais je penche sur la seconde, qui me permettrait d'explorer une langue moins dotée, dans la lignée de l'article "Pre-training Data Quality for Low-Resource Languages: New Corpus and BERT Models for Maltese" (Micallef et al., 2022) que je vais présenter en cours d'"Analyse linguistique de modèles de langues".  
+Je pense que je devrai liste *en amont* la liste des traductions possibles pour le terme choisi, quel qu'il soit, et ce afin de pouvoir ratisser le web avec efficacité. Ce projet adopterait donc une approche *corpus-based*, dans la mesure où le terme étudié et ses traductions possibles sont définis en amont. Cependant, une phase exploratoire plus inductive (*corpus-driven*) pourra ensuite permettre de repérer des variantes émergentes ou non prévues initialement.  
+

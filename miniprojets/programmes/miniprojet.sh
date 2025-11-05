@@ -11,11 +11,11 @@ fi
 URL=$1
 
 # counter for the line number of the urls file
-num=0
+lineno=0
 while read -r line;
 do
 	# increment the line counter by 1	
-	num=$(expr $num + 1)
+	lineno=$(expr $lineno + 1)
 
     # curl: makes an http request
 	# -s --silent (do not display extra metadata)
@@ -43,5 +43,10 @@ do
 	# -e enable interpretation of escapes
 	# \t tabulation
 	echo -e "$num\t$line\t$codes\t$num_words"
+
+
+	# utiliser curl -o /dev/null au lieu de (ou combiné à) curl -s
+	# echo $content_type | grep -E -o "charset=.*" | cut -d= -f
+	# echo "text/html" | grep -E -o "charset=.*" | cut -d= -f2
 
 done < $URL
