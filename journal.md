@@ -145,6 +145,11 @@ XXX
 ## Notions abordées en cours  
 XXX  
 
+## Travail à la maison  
+*Pourquoi ne pas utiliser CAT ?*  
+Lorsque l'on utilise CAT dans une boucle for, tous les caractères d'espace comptent comme séparateurs de mots (ce qui affiche donc un mot par ligne). Or, il se trouve que la liste des URL fournie comporte "par erreur" une espace dans une adresse. Avec CAT, cette adresse risquerait de se retrouver sur deux lignes différentes.  
+
+
 # Semaine 6 – 5 novembre  
 ## Notions abordées en cours  
 ```
