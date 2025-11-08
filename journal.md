@@ -165,7 +165,42 @@ mkdir un\ dossier OU mkdir "un dossier"
 ```
 
 ## Travail à la maison  
-mini-projet 2 : modifier le script de façon à afficher les infos du tableau tsv dans un tableau HTML (tableau-fr.html)  
+1. "**miniprojet-1-revu**" : J'ai revu mon script en m'inspirant de la démonstration faite par les enseignants en cours :  
+- J'ai continué à étoffer mes commentaires, pour que je sois en mesure de comprendre mon code lorsque je le relirai dans quelques semaines.  
+- J'ai lu le manuel de la fonction "cut" pour comprendre le fonctionnement des options "-f" et "-d" afin de n'afficher que les informations pertinentes (en l'occurrence, le charset)   
+2. "**miniprojet-2**" : Je me suis attelée au mini-projet-2  (sortie dans un tableau HTML). J'ai eu besoin de créer un fichier .html "brouillon" dans lequel écrire, en HTML, le tableau de sortie que je souhaitais obtenir avec mon script, de façon à savoir clairement quoi demander au script, et comment le demander. J'ai divisé mon code HTML en trois parties, chacune étant associé à sa commande cat << EOF (permettant d'écrire plusieurs lignes en une seule fois) :  
+- la première partie, comprenant les premières balises ainsi que la ligne d'en-tête des colonnes, a été collée *juste avant* la boucle while du script et associée à une commande ;  
+- la deuxième partie, comprenant une ligne de tableau type destinée à être écrite autant de fois que le nombre de lignes dans le ficher fr.txt, a été collée au sein et à la fin de la boucle while ;  
+- la troisième partie, comprenant les dernières balises HTML, a été collée juste après la boucle while...  
+... le tout de façon à ce que ces trois parties soient collées les unes aux autres dans la sortie fournie par le script.  
+Bien que cela ne paraisse pas dans les consignes, j'ai distingué avec deux noms différents les deux scripts pour ne pas supprimer celui correspondant au premier miniprojet : "miniprojet-1.sh" a une sortie en .tsv, tandis que "miniprojet-2.sh" a une sortie en .html.  
+
+```
+<html>
+	<head>
+        <meta charset="UTF-8"/>
+        <title>Mini-projet 2</title>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th>lineno</th>
+                <th>adresse html</th>
+                <th>response code</th>
+                <th>charset</th>
+                <th>word number</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><a href="https://fr.wikipedia.org/wiki/Robot">https://fr.wikipedia.org/wiki/Robot</td>
+                <td>200</td>
+                <td>UTF-8</td>
+                <td>0</td>
+            </tr>
+        </table>
+    </body>
+</html>
+```
 
 
 ## Réflexions personnelles 
