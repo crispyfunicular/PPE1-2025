@@ -17,17 +17,28 @@ do
 	# increment the line counter by 1	
 	lineno=$(expr $lineno + 1)
 
-    # curl: makes an http request
+    # curl: make an http request
 	# -s --silent (do not display extra metadata)
 	# -I --head (metadata only)
 	# -L --location (follow redirections)
 	# -w --write-out "format string" (add metadata at the end of the standard output)
 	# tail -n 1 (keep only the last line)
-	codes=$(curl -s -I -L -w "\n%{response_code}\t%{content_type}\n" $line | tail -n 1)
+	# $metadata is the HTTP response's status code and contains, separated by a tabulation, the content type
+	metadata=$(curl -s -I -L -w "%{response_code}\t%{content_type}" -o /dev/null $line)
 	
+	# Keep only the first part of the variable, tab being the default separator
+	# $(...) -> mandatory to store the result of the command into the variable
+	response_code=$(echo "$metadata" | cut -f1)
+	
+	# Keep the part after the tabulation and look for an expression with "charset",
+	# and divide it in two parts in the "=" sign and keep only the right part ("UTF-8")
+	charset=$(echo "$metadata" | cut -f2 | grep -E -o "charset=.*" | cut -d= -f2)
+
+
 	# ok if the http response code starts with 2 (200, 201,...)
-	ok=$(echo $codes | grep ^2)
+	ok=$(echo $response_code | grep ^2)
 	
+
 	if [ -n "$ok" ];
 	then
 		# lynx: browse a web page
@@ -39,14 +50,10 @@ do
 		num_words=0
 	fi
 	
+
 	# Display all variables
 	# -e enable interpretation of escapes
 	# \t tabulation
-	echo -e "$num\t$line\t$codes\t$num_words"
-
-
-	# utiliser curl -o /dev/null au lieu de (ou combiné à) curl -s
-	# echo $content_type | grep -E -o "charset=.*" | cut -d= -f
-	# echo "text/html" | grep -E -o "charset=.*" | cut -d= -f2
+	echo -e "$lineno\t$line\t$response_code\t$charset\t$num_words"
 
 done < $URL
