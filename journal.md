@@ -207,3 +207,13 @@ Bien que cela ne paraisse pas dans les consignes, j'ai distingué avec deux noms
 Bien que je n'aie pas encore de groupe pour le projet de fin de semestre, j'ai réfléchi à un mot sur lequel je pourrais travailler et qui ne présente pas d'équivalence 1 à 1 évidente en langue étrangère. J'ai pensé au terme "**laïcité**", qui recouvre un concepte très spécifique en droit français et qui peut se traduire de diverses façons en anglais et catalan. J'hésite sur entre ces deux langues mais je penche sur la seconde, qui me permettrait d'explorer une langue moins dotée, dans la lignée de l'article "Pre-training Data Quality for Low-Resource Languages: New Corpus and BERT Models for Maltese" (Micallef et al., 2022) que je vais présenter en cours d'"Analyse linguistique de modèles de langues".  
 Je pense que je devrai liste *en amont* la liste des traductions possibles pour le terme choisi, quel qu'il soit, et ce afin de pouvoir ratisser le web avec efficacité. Ce projet adopterait donc une approche *corpus-based*, dans la mesure où le terme étudié et ses traductions possibles sont définis en amont. Cependant, une phase exploratoire plus inductive (*corpus-driven*) pourra ensuite permettre de repérer des variantes émergentes ou non prévues initialement.  
 
+# Semaine 6 – 5 novembre  
+## Notions abordées en cours  
+- Comment faire un site vitrine à partir de GitHub  
+- Présentation de la bibliothèque Bulma CSS  
+- Expressions régulières (regex)  
+
+## Travail à la maison  
+modifier une copie du tableau (.html) produit par le script (.sh) des semaines précédentes en y intégrant des modifications de style avec Bulma. Une fois que le résutat est satisfaisant, modifier directement le script de façon à ce qu'il produise un résultats similaire au tableau .html modifié.  
+
+## Réflexions personnelles 

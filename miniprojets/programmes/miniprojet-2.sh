@@ -73,7 +73,7 @@ do
 	# Write one table row (<tr>) for each line in fr.txt
 	cat << EOF
             <tr>
-                <td>$lineno</td>
+                <td class="toto">$lineno</td>
                 <td><a href="$line">$line</td>
                 <td>$response_code</td>
                 <td>$charset</td>
