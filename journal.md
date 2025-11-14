@@ -7,7 +7,7 @@ fichier, dossier/répertoire, dossier « parent », arborescence, racine, dossie
 ## Travail à la maison  
 J’ai réalisé l’exercice 1 à la maison, sur mon ordinateur fixe. J’ai copié les lignes de commandes utilisées :  
 
-```
+```bash
 mkdir Exercice1  
 cd Exercice1  
 wget "http://plurital.org/ppe1/seance1/archive-25.zip"  
@@ -68,7 +68,7 @@ Ex : cat *.txt | grep université | wc > output.txt
 Du bash !  
 Pour réaliser les exercices, il m'a fallu lire les manuels des commandes suivantes : grep, sort, uniq, echo, cut et tail (+ head qui ne figurait pas sur la liste fournie)
 
-```
+```bash
 #!/usr/bin/bash
 
 year=$1
@@ -152,13 +152,13 @@ Lorsque l'on utilise CAT dans une boucle for, tous les caractères d'espace comp
 
 # Semaine 6 – 5 novembre  
 ## Notions abordées en cours  
-```
+```bash
 Triumvira des caractères spéciaux (en bash ou C) :  
     \t : tabulation  
     \n : retour à la ligne  
     \r : retour charriot  
 ```
-```
+```bash
 Caractère d'échappement :  
 mkdir a\*isborn OU mkdir "a*isborn"  
 mkdir un\ dossier OU mkdir "un dossier"  
@@ -175,7 +175,7 @@ mkdir un\ dossier OU mkdir "un dossier"
 ... le tout de façon à ce que ces trois parties soient collées les unes aux autres dans la sortie fournie par le script.  
 Bien que cela ne paraisse pas dans les consignes, j'ai distingué avec deux noms différents les deux scripts pour ne pas supprimer celui correspondant au premier miniprojet : "miniprojet-1.sh" a une sortie en .tsv, tandis que "miniprojet-2.sh" a une sortie en .html.  
 
-```
+```bash
 <html>
 	<head>
         <meta charset="UTF-8"/>
@@ -202,12 +202,12 @@ Bien que cela ne paraisse pas dans les consignes, j'ai distingué avec deux noms
 </html>
 ```
 
-
 ## Réflexions personnelles 
 Bien que je n'aie pas encore de groupe pour le projet de fin de semestre, j'ai réfléchi à un mot sur lequel je pourrais travailler et qui ne présente pas d'équivalence 1 à 1 évidente en langue étrangère. J'ai pensé au terme "**laïcité**", qui recouvre un concepte très spécifique en droit français et qui peut se traduire de diverses façons en anglais et catalan. J'hésite sur entre ces deux langues mais je penche sur la seconde, qui me permettrait d'explorer une langue moins dotée, dans la lignée de l'article "Pre-training Data Quality for Low-Resource Languages: New Corpus and BERT Models for Maltese" (Micallef et al., 2022) que je vais présenter en cours d'"Analyse linguistique de modèles de langues".  
 Je pense que je devrai liste *en amont* la liste des traductions possibles pour le terme choisi, quel qu'il soit, et ce afin de pouvoir ratisser le web avec efficacité. Ce projet adopterait donc une approche *corpus-based*, dans la mesure où le terme étudié et ses traductions possibles sont définis en amont. Cependant, une phase exploratoire plus inductive (*corpus-driven*) pourra ensuite permettre de repérer des variantes émergentes ou non prévues initialement.  
 
-# Semaine 6 – 5 novembre  
+
+# Semaine 7 – 12 novembre  
 ## Notions abordées en cours  
 - Comment faire un site vitrine à partir de GitHub  
 - Présentation de la bibliothèque Bulma CSS  
