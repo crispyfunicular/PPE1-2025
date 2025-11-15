@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# ./miniprojet-3.sh ../urls/fr.txt > ../tableaux/tableau-fr.html
+
 # $# number of arguments passed to the program
 if [ $# -ne 1 ]
 then
@@ -13,20 +15,31 @@ URL=$1
 # cat << EOF allows to print multiple lines at once
 # Write the begining of the HTML file/table
 cat << EOF
-<html>
-	<head>
-        <meta charset="UTF-8"/>
-        <title>Mini-projet 2</title>
-    </head>
-    <body>
-        <table>
-            <tr>
-                <th>lineno</th>
-                <th>adresse html</th>
-                <th>response code</th>
-                <th>charset</th>
-                <th>word number</th>
-            </tr>
+<!doctype html>
+	<html>
+		<head>
+			<meta charset="UTF-8"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/versions/bulma-no-dark-mode.min.css">
+			<title>Mini-projet 2</title>
+		</head>
+
+		<body>
+            <section class="section">
+                <div class="container">
+					<table class="table is-fullwidth is-hoverable is-bordered is-striped">
+						
+						<thead class="has-background-text-light">
+							<tr>
+								<th scope="col">line no</th>
+								<th scope="col">adresse html</th>
+								<th scope="col">response code</th>
+								<th scope="col">charset</th>
+								<th scope="col">word number</th>
+							</tr>
+						</thead>
+
+						<tbody>
 EOF
 
 # counter for the line number of the urls file
@@ -71,21 +84,32 @@ do
 	
 
 	# Write one table row (<tr>) for each line in fr.txt
+	# When different than 200, the response code is red (class="has-text-danger")
+	if ! [[ "$response_code" -eq 200 ]];
+	then
+		rc_class=' class="has-text-danger"'
+	else
+		rc_class=''
+	fi
+
 	cat << EOF
-            <tr>
-                <td>$lineno</td>
-                <td><a href="$line">$line</td>
-                <td>$response_code</td>
-                <td>$charset</td>
-                <td>$num_words</td>
-            </tr>
+							<tr>
+								<td>$lineno</td>
+								<td><a href="$line">$line</td>
+								<td${rc_class}>$response_code</td>
+								<td>$charset</td>
+								<td>$num_words</td>
+							</tr>
 EOF
 
 done < $URL
 
 # Write the end of the HTML table/file
 cat << EOF
-        </table>
-    </body>
-</html>
+						</tbody>
+					</table>
+                </div>
+            </section>
+        </body>
+    </html>
 EOF

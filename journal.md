@@ -131,9 +131,9 @@ Page de code à expliquer :
 
 
 ## Réflexions personnelles  
-- J'ai eu (beaucoup) de mal à dompter la syntaxe propre à bash et à me défaire de mes habitudes pytonesques :
--- absence d'espace autour du signe "="
--- place du "!" juste après le "if"
+- J'ai eu (beaucoup) de mal à dompter la syntaxe propre à bash et à me défaire de mes habitudes pytonesques :  
+  - absence d'espace autour du signe "="  
+  - place du "!" juste après le "if"  
 - Je comprends l'importance d'aller consulter les manuels des commandes mentionnées rapidement en cours pour comprendre leur fonctionnement et réussir à faire les exercices
 
 
@@ -149,7 +149,7 @@ XXX
 *Pourquoi ne pas utiliser CAT ?*  
 Lorsque l'on utilise CAT dans une boucle for, tous les caractères d'espace comptent comme séparateurs de mots (ce qui affiche donc un mot par ligne). Or, il se trouve que la liste des URL fournie comporte "par erreur" une espace dans une adresse. Avec CAT, cette adresse risquerait de se retrouver sur deux lignes différentes.  
 
-
+  
 # Semaine 6 – 5 novembre  
 ## Notions abordées en cours  
 ```bash
@@ -159,7 +159,7 @@ Triumvira des caractères spéciaux (en bash ou C) :
     \r : retour charriot  
 ```
 ```bash
-Caractère d'échappement :  
+Caractère d échappement :  
 mkdir a\*isborn OU mkdir "a*isborn"  
 mkdir un\ dossier OU mkdir "un dossier"  
 ```
@@ -214,6 +214,23 @@ Je pense que je devrai liste *en amont* la liste des traductions possibles pour 
 - Expressions régulières (regex)  
 
 ## Travail à la maison  
-modifier une copie du tableau (.html) produit par le script (.sh) des semaines précédentes en y intégrant des modifications de style avec Bulma. Une fois que le résutat est satisfaisant, modifier directement le script de façon à ce qu'il produise un résultats similaire au tableau .html modifié.  
+- Consulter la documentation Bulma en ligne
+- Modifier une copie du tableau (.html) produit par le script (.sh) des semaines précédentes en y intégrant des modifications de style avec Bulma.  
+- Une fois que le résutat est satisfaisant, modifier directement le script de façon à ce qu'il produise un résultats similaire au tableau .html modifié.  
+- Créer et publier sur GitHub deux pages HTML :
+  - une page d'accueil index.html qui utilise le style Bulma avec :  
+    - une présentation rapide du mini-projet ;  
+    - le lien vers...  
+  - ... la page HTML qui contient le tableau de résultat
+
 
 ## Réflexions personnelles 
+La librairie Bulma est assez bluffante (le ratio temps de prise en main / résultat obtenu est très satisfaisant). J'en ai parlé autour de moi à des informaticiens qui y ont jeté un oeil et ont eux aussi été conquis. Cela m'a rappelé Bootstrap, que j'avais utilisé pour développer ma page personnelle il y a une douzaine d'années...   
+Ayant moi-même un projet personnel de page internet (pour recenser tous les cols épinglés à vélo, listés aujourd'hui dans un Excel), certes constamment relégué derrière les devoirs du master pluriTAL, je conserve soigneusement dans mes favoris la documentation Bulma pour y revenir à ma guise (et ne serait-ce pour le projet de groupe du premier semestre).  
+  
+Concernant mes choix de style pour le miniprojet-3 :  
+- j'ai préféré rester sobre pour le tableau, en restant sur des nuances de gris et sans me perdre en fioritures ("keep it simple!")  
+  - toutefois, j'ai ajouté à mon script une boucle if/else pour faire apparaître en rouge les code de réponse HTTP qui ne correspondent pas à 200 (deux cas dans les exemples du miniprojet), et ce afin de contrebalancer ma décision de ne pas corriger ces réponses "erronées" pour laisser l'utilisateurice en prendre connaissance.  
+- j'ai un peu plus joué avec la palette de couleurs et les options offertes par Bulma pour la page princpale (index.html).  
+
+En conclusion : une expérience chronophage mais passionnante ! Je sais que je serai amenée à utiliser à nouveau la librairie Bulma, dans ma vie professionnelle comme personnelle.  
