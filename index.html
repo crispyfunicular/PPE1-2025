@@ -1,0 +1,56 @@
+<!doctype html>
+    <html>
+        <head>
+            <meta charset="UTF-8"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1"/>
+            <title>PPE</title>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+        </head>
+
+        <body class="has-background-primary-90 has-text-primary-90-invert">
+            <section class="section">
+                <div class="container content">
+                    <h1 class="title">Programmation et projet encadré</h1>
+                        <h2 class="subtitle">Mini-projets 1-2-3</h2>
+                    <p>
+                        Le <span class="has-text-weight-semibold">miniprojet-3</span> (output = tableau <span  class="has-text-primary-35">.html</span> avec Bulma) résulte du <span class="has-text-weight-semibold">miniprojet-2</span> (output = tableau <span  class="has-text-primary-35">.tsv</span>), qui résulte lui-même du <span class="has-text-weight-semibold">miniprojet-1</span> (output directement dans le terminal).
+                    </p>
+
+                    <div class="content">
+                        <p>
+                            Ces projets successifs avaient pour objectif de simuler une petite chaîne de collecte web. Le but était d'écrir en <span  class="has-text-primary-35">bash</span> un script capable :
+                        </p>
+                        <ol>
+                            <li>d'extraire, pour chaque URL fourni dans une liste au format .txt :
+                                <ul>
+                                    <li>des métadonnées (code HTTP, charset)</li>
+                                    <li>un comptage de mots</li>
+                                </ul>
+                                <p class="icon-text">
+                                    <span class="icon"><i class="fa-solid fa-arrow-right"></i></span>
+                                    <span>En utilisant <span  class="has-text-primary-35">curl, lynx, wc, cut</span> et <span  class="has-text-primary-35">grep</span></span>
+                                </p>
+                            </li>
+                            <li>puis de produire en sortie :
+                                <ul>
+                                    <li>une sortie tabulaire pour le miniprojet-2</li>
+                                    <li>une page HTML utilisant le style Bulma avec un tableau lisible pour le miniprojet-3.</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div class="buttons is-centered">
+                        <a class="button is-primary is-normal" href="/miniprojets/tableaux/tableau-fr.html" target="_blank">
+                            <span class="icon">
+                                <i class="fa-solid fa-table"></i>
+                            </span>
+                            <span>Tableau HTML</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </body>
+    </html>
