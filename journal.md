@@ -137,14 +137,7 @@ Page de code à expliquer :
 - Je comprends l'importance d'aller consulter les manuels des commandes mentionnées rapidement en cours pour comprendre leur fonctionnement et réussir à faire les exercices
 
 
-# Semaine 4 – 15 octobre  
-## Notions abordées en cours  
-XXX  
-
 # Semaine 5 – 22 octobre  
-## Notions abordées en cours  
-XXX  
-
 ## Travail à la maison  
 *Pourquoi ne pas utiliser CAT ?*  
 Lorsque l'on utilise CAT dans une boucle for, tous les caractères d'espace comptent comme séparateurs de mots (ce qui affiche donc un mot par ligne). Or, il se trouve que la liste des URL fournie comporte "par erreur" une espace dans une adresse. Avec CAT, cette adresse risquerait de se retrouver sur deux lignes différentes.  
@@ -204,7 +197,7 @@ Bien que cela ne paraisse pas dans les consignes, j'ai distingué avec deux noms
 
 ## Réflexions personnelles 
 Bien que je n'aie pas encore de groupe pour le projet de fin de semestre, j'ai réfléchi à un mot sur lequel je pourrais travailler et qui ne présente pas d'équivalence 1 à 1 évidente en langue étrangère. J'ai pensé au terme "**laïcité**", qui recouvre un concepte très spécifique en droit français et qui peut se traduire de diverses façons en anglais et catalan. J'hésite sur entre ces deux langues mais je penche sur la seconde, qui me permettrait d'explorer une langue moins dotée, dans la lignée de l'article "Pre-training Data Quality for Low-Resource Languages: New Corpus and BERT Models for Maltese" (Micallef et al., 2022) que je vais présenter en cours d'"Analyse linguistique de modèles de langues".  
-Je pense que je devrai liste *en amont* la liste des traductions possibles pour le terme choisi, quel qu'il soit, et ce afin de pouvoir ratisser le web avec efficacité. Ce projet adopterait donc une approche *corpus-based*, dans la mesure où le terme étudié et ses traductions possibles sont définis en amont. Cependant, une phase exploratoire plus inductive (*corpus-driven*) pourra ensuite permettre de repérer des variantes émergentes ou non prévues initialement.  
+Je pense que je devrai lister *en amont* la liste des traductions possibles pour le terme choisi, quel qu'il soit, et ce afin de pouvoir ratisser le web avec efficacité. Ce projet adopterait donc une approche *corpus-based*, dans la mesure où le terme étudié et ses traductions possibles sont définis en amont. Cependant, une phase exploratoire plus inductive (*corpus-driven*) pourra ensuite permettre de repérer des variantes émergentes ou non prévues initialement.  
 
 
 # Semaine 7 – 12 novembre  
@@ -234,3 +227,39 @@ Concernant mes choix de style pour le miniprojet-3 :
 - j'ai un peu plus joué avec la palette de couleurs et les options offertes par Bulma pour la page princpale (index.html).  
 
 En conclusion : une expérience chronophage mais passionnante ! Je sais que je serai amenée à utiliser à nouveau la librairie Bulma, dans ma vie professionnelle comme personnelle.  
+
+
+# Semaine 8 – 19 novembre  
+## Notions abordées en cours  
+```bash
+cat exemple.txt | grp moulins | sed 's/moulins/MOULINS/'  
+cat exemple.txt | grp moulins \(...\) | sed 's/moulins/MOULINS/' # à bricoler pour les exercices à faire à la maison.  
+```
+```bash
+# Gestion de conflits de versions
+git fetch # récupérer les métadonnées du dépôt (voir si on a des commits de retard)
+git reset # annuler les add mais pas les commits (ne supprime par défaut aucun changement)  
+    git reset HEAD~ # revenir à la dernière version du dépôt et annuler les add
+	git reset <commit> # ex : un identifiant SHA ou un tag
+git revert
+git stash 
+git checkout # se "téléporter" directement à un état donné.
+	git checkout <commit>
+	git checkout <fichier>
+	git checkout <commit> - [fichier ...]
+```
+**Expressions régulières / Regex (suite)**
+- Lookahead X(?=Y) ou X(?!Y) et Lookbehind (?<=Y)X ou (?<=Y)X ou encore (*pla: ... ) (*plb: ... ) (*nla: ...) (*nlb: ... )
+
+## Travail à la maison  
+```bash
+"((https?:\/\/(www)?)|(www\.))(([a-zA-Z]|-|_)+\.)*([a-z]){2,}\/?([a-zA-Z]|[0-9]|-|_|(\/|\?|\=))*" # URL
+"/((\+[0-9]{2})( |.)?(\(0\)[0-9]( |\.|\-)))?(([0-9]{2})( |\.|\-)?){4,5}/gm" # numéro de téléphone
+"/(\w+|(à|é|ï|ü|ë))*(?=( |,|.))/gm" # isoler chaque mot
+```
+
+- Repérage des "moulins à vent" sur le texte de Don Quichotte (.txt)  
+- Pseudo-lémmatisation de MANGER ("mangeaient" &rarr; "MANGER+eaient")  
+- &rarr; Le tout en utilisant "grep" et "sed"  
+
+## Réflexions personnelles 
