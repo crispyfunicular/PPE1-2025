@@ -262,5 +262,26 @@ git checkout # se "téléporter" directement à un état donné.
 - Pseudo-lémmatisation de MANGER ("mangeaient" &rarr; "MANGER+eaient")  
 - &rarr; Le tout en utilisant "grep" et "sed"  
 
+```bash
+# cat : affiche le contenu du fichier dans le terminal
+# grep : filtre les lignes contenant le mot ou regex (avec -E)
+# sed : s/// remplace l'expression recherchée (entre les deux premiers /) par une autre (entre les deux derniers /). Les numéros renvoient aux groupes de capture de la regex (entre les deux premiers /). Attention aux échappements de caractères spéciaux (y compris les parenthèses, les pipes et les +)
+
+cat pg16066.txt | grep moulins | sed 's/moulins à vent/moulins-à-vent/'
+cat pg16066.txt | grep -E "mang(e|i)" > moulins.txt
+cat pg16066.txt | grep -E "mang(e|i)" | sed 's/\(^\| \|")mang\([^\.,; ]\+\)/\1MANGER+\2/g' > manger.txt # incomplet (laisse passer trop de cas de figure : mangue + ponctuation, tabulations...)
+cat pg16066.txt | grep -E "mang(e|i)" | sed 's/\(^\|[[:punct:][:space:]]\)mang\(i\|e\)\([^[:punct:][:space:]]*\)/\1MANGER+\2\3/g' > manger.txt
+
+# groupe 1 = \(^\|[[:punct:][:space:]]\) --> uniquement les mots précédés d'une espace (au sens large), d'un signe de ponctuation ou début de ligne (^)...
+# groupe 2 = \(i\|e\) --> pour éviter "mangue" ou "mangrove",...
+# groupe 3 = \([^[:punct:][:space:]]*\) --> qui soient suivis de tout caractère qui ne soit pas (^ = "différent de") une espace ou un signe de ponctuation
+# [:punct:] --> caractères spéciaux (:;.?!-'"())
+# [:space:] --> espace, espace inseccable, tabulation, etc.
+# \1 \2 \3 --> correspond au groupe de capture de la regex
+# g = global --> pour remplacer plusieurs occurences (différentes ou non) de la regex par ligne
+
+echo "Il lui dit : 'mange ta mangue dans la mangrove'" | grep -E "mang(e|i)" | sed 's/\(^\|[[:punct:][:space:]]\)mang\(i\|e\)\([^[:punct:][:space:]]*\)/\1MANGER+\2\3/g'
+```
+
 ## Réflexions personnelles 
- 
+Bash + sed = combo infernal !
