@@ -254,8 +254,8 @@ git checkout # se "téléporter" directement à un état donné.
 ## Travail à la maison  
 ```bash
 "((https?:\/\/(www)?)|(www\.))(([a-zA-Z]|-|_)+\.)*([a-z]){2,}\/?([a-zA-Z]|[0-9]|-|_|(\/|\?|\=))*" # URL
-"/((\+[0-9]{2})( |.)?(\(0\)[0-9]( |\.|\-)))?(([0-9]{2})( |\.|\-)?){4,5}/gm" # numéro de téléphone
-"/(\w+|(à|é|ï|ü|ë))*(?=( |,|.))/gm" # isoler chaque mot
+"/((\+[0-9]{2,3})( |\.|\-)?(\(0\)[0-9]( |\.|\-)?))?(([0-9]{2,3})( |\.|\-)?){4,5}/gm" # numéro de téléphone
+"/(\w|(à|é|è|ï|ü|ë|ê|â|û|ô|ÿ|ç))+(?=( |,|\.|\)|:|!|\?))/gm" # isoler chaque mot
 ```
 
 - Repérage des "moulins à vent" sur le texte de Don Quichotte (.txt)  
@@ -263,3 +263,4 @@ git checkout # se "téléporter" directement à un état donné.
 - &rarr; Le tout en utilisant "grep" et "sed"  
 
 ## Réflexions personnelles 
+ 
