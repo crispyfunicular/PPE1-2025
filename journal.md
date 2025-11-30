@@ -289,7 +289,27 @@ Bash + sed = combo infernal !
 
 # Semaine 9 – 26 novembre  
 ## Notions abordées en cours  
-Regex, la suite !  
+- **Environnements virtuels** : Programme qui simule un système d'exploitation &rarr; permet de le lancer de manière isolée du système  
+
+```bash
+uv venv $HOME/venvs/plurital
+source $HOME/venvs/plurital/bin/activate
+uv pip install wordcloud
+```
+
+- **Nuages de mots** : Quels sont les mots qui gravitent autour du mot cible (p. ex. "robot") ? (textométrie)  
+
+```bash
+python3 ./cooccurrents.py --target robot fr-*.txt N -10 -s i
+# N -10 = n'affiche que 10 résultats  
+# -s = ignorer la casse  
+```
+
+- **Segmentation de mots** :  
+```bash
+python -m pip install -r requirements.txt
+python tokenize_chinese.py chinois.txt > chinois_seg.txt
+```
 
 
 ## Réflexions personnelles 
