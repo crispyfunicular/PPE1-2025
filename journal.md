@@ -285,3 +285,28 @@ echo "Il lui dit : 'mange ta mangue dans la mangrove'" | grep -E "mang(e|i)" | s
 
 ## Réflexions personnelles 
 Bash + sed = combo infernal !
+
+
+# Semaine 9 – 26 novembre  
+## Notions abordées en cours  
+Regex, la suite !  
+
+
+## Réflexions personnelles 
+J'ai enfin un groupe (100% Nanterre, oups !) pour le projet final et vais enfin pouvoir commencer ! Notre groupe est composé d'un Chinois, pour le mandarin, d'un Colombien, pour l'espagnol, et d'une Française (moi) pour le français.    
+Après avoir hésité avec "laïcité" (abandonné car trop vague pour être étudié en mandarin), nous nous sommes mis d'accord sur le terme "**cessez-le-feu**", qui nous semblait intéressant car trigramme. Nous allons nous concentrer sur les articles de presse, avant et après la guerre en Ukraine (a priori 2020-2021 vs 2023-2024).  
+Concernant le français, j'ai choisi de me limiter aux journaux français pour limiter les critères à l'étude. Les URL ont été sélectionnées via une recherche sur Google de type '"cessez-le-feu" site:liberation.fr', en précisant les dates de recherche (ex : du 01/01/2020 au 31/12/2021) et en veillant que les articles portaient bien sur un contexte belliqueux et ne faisaient pas un usage métaphorique de l'expression recherchée.  
+Puisque ma thèse (en traductologie) reposait sur quatre corpus, j'ai une certaine expérience dans le domaine. J'ai donc proposé la méthodologie suivante au reste de mon groupe :  
+- Un corpus journalistique "pré_ukraine" composé d'articles tirés de 5 journaux français :
+  - _L'Humanité_ : 30 articles identifiés individuellement par un id du type "journal_id" (par exemple "humanite_03")
+  - _Libération_ : idem (par exemple "liberation_17")
+  - _Le Monde_ : idem (par exemple "lemonde_12")
+  - _La Croix_ : idem (par exemple "lacrois_29")
+  - _Le Figaro_ : idem (par exemple "lefigaro_05")
+  - -> Un script Python sélectionnera au hasard, via range, cinq articles pour chaque journal, de façon a obtenir 5x5=25 articles pour la période.
+- Un corpus journalistique "post_ukraine" :
+  - idem  
+
+Nous partageons un tableur en ligne avec un onglet par langue pour lister les 2x(5x30)=**300 articles par langue**.  
+
+Ce protocole, via **un premier échantillonnage qualitatif puis un second échantillonnage quantitatif**, permet d'assurer à la fois la **représentativité** et l'**objectivité** de notre échantillon final, sur lequel reposeront nos mesures.
