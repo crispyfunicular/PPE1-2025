@@ -259,7 +259,7 @@ git checkout # se "téléporter" directement à un état donné.
 ```
 
 - Repérage des "moulins à vent" sur le texte de Don Quichotte (.txt)  
-- Pseudo-lémmatisation de MANGER ("mangeaient" &rarr; "MANGER+eaient")  
+- Pseudo-lemmatisation de MANGER ("mangeaient" &rarr; "MANGER+eaient")  
 - &rarr; Le tout en utilisant "grep" et "sed"  
 
 ```bash
